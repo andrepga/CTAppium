@@ -2,14 +2,10 @@ package br.com.apga.ctAppium.test;
 
 import static org.junit.Assert.*;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
 import br.com.apga.ctAppium.core.BaseTest;
-import br.com.apga.ctAppium.core.DriverFactory;
 import br.com.apga.ctAppium.page.FormularioPage;
 import br.com.apga.ctAppium.page.MenuPage;
 
@@ -22,19 +18,11 @@ public class FormularioTest extends BaseTest{
 	public static void setUpBeforeClass() throws Exception {
 	}
 
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
 	@Before
 	public void setUp() throws Exception {
 		menu.acessarFormulario();
 	}
 
-	@After
-	public void tearDown() throws Exception {
-		DriverFactory.killDriver();
-	}
 
 	@Test
 	public void devePreencherCampoNome() {
