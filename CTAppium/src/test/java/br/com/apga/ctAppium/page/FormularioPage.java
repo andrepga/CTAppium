@@ -48,11 +48,11 @@ public class FormularioPage extends BasePage {
 	}
 	
 	public String obterConsoleSalvo(){
-		return obterTexto(By.xpath("//android.widget.TextView[starts-with(@text, 'Console:']"));
+		return obterTexto(By.xpath("//android.widget.TextView[starts-with(@text, 'Console:')]"));
 	}
 	
 	public String obterSliderSalvo(){
-		return obterTexto(By.xpath("//android.widget.TextView[starts-with(@text, 'Slider:']"));
+		return obterTexto(By.xpath("//android.widget.TextView[starts-with(@text, 'Slider:')]"));
 	}
 	
 	public void clicarSalvarDemorado(){

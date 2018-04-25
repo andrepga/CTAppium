@@ -48,12 +48,13 @@ public class BasePage {
 		List<MobileElement> elementos = getDriver().findElements(By.xpath("//*[@text='" + texto + "']"));
 		return elementos.size() > 0;
 	}
-	
-	public void aguardarSplashSumir(){
-		DriverFactory.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
-		WebDriverWait wait= new WebDriverWait(getDriver(), 10);
+
+	public void aguardarSplashSumir() {
+		getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+		WebDriverWait wait = new WebDriverWait(getDriver(), 10);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//*[@text='Splash!']")));
-		
+
 	}
+	
 
 }
